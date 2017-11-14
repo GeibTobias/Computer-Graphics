@@ -21,7 +21,7 @@ else()
     message(FATAL_ERROR "libpng-dev is required to build the CG1-raytracer.\nPlease install libpng-dev.")
 endif ()
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(assignment-01)
 set(ALL_ASSIGNMENT_SOURCES)
 
 file(GLOB ASSIGNMENT_FILES "${CMAKE_CURRENT_SOURCE_DIR}/assignment-*.cmake")
@@ -35,6 +35,6 @@ foreach(f ${ASSIGNMENT_FILES})
     list(APPEND ALL_ASSIGNMENT_SOURCES ${ASSIGNMENT_SOURCES})
 endforeach()
 
-add_executable(cgray ${ALL_ASSIGNMENT_SOURCES} main/main.cpp)
+add_executable(cgray ${ALL_ASSIGNMENT_SOURCES} assignment-01/main/main.cpp)
 target_link_libraries(cgray ${ASSIGNMENT_LIBRARIES})
 set_target_properties(cgray PROPERTIES DEBUG_POSTFIX "d")
