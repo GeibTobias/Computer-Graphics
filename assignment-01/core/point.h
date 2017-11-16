@@ -18,12 +18,10 @@ public:
 
     static Point rep(float v) { return Point(v,v,v); }
 
-    //TODO: Research whether this->x is needed.
-    Vector operator-(const Point& b) const{ return Vector(b.x - x, b.y -y, b.z - z);}
+    Vector operator-(const Point& b) const;
 
-    bool operator==(const Point& b) const{ return (b.x == x && b.y == y && b.z == z);}
-    // does this even work?
-    bool operator!=(const Point& b) const{ return !(b==this);}
+    bool operator==(const Point& b) const;
+    bool operator!=(const Point& b) const;
 
 };
 
