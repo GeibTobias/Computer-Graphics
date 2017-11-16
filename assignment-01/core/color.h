@@ -27,15 +27,11 @@ public:
     RGBColor clamp() const;
     RGBColor gamma(float gam) const;
     float luminance() const;
-
-
-
 };
 
 RGBColor operator*(float scalar, const RGBColor& b);
 RGBColor operator*(const RGBColor& a, float scalar);
 RGBColor operator/(const RGBColor& a, float scalar);
-
 }
 
 #endif
